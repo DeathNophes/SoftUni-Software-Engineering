@@ -1,0 +1,7 @@
+factor = int(input())
+count = int(input())
+my_list = []
+for i in range(1, count + 1):
+    number = factor * i
+    my_list.append(number)
+print(my_list)
