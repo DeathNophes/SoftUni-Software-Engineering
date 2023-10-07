@@ -7,24 +7,19 @@ for fire in fires:
     current_fire = fire.split()
     fire_type = current_fire[0]
     cell_value = int(current_fire[2])
+    if water < cell_value: continue
 
     if fire_type == "High" and 81 <= cell_value <= 125:
-        if water < cell_value:
-            continue
         water -= cell_value
         total_effort += (0.25 * cell_value)
         total_fire += cell_value
 
     elif fire_type == "Medium" and 51 <= cell_value <= 80:
-        if water < cell_value:
-            continue
         water -= cell_value
         total_effort += (0.25 * cell_value)
         total_fire += cell_value
 
     elif fire_type == "Low" and 1 <= cell_value <= 50:
-        if water < cell_value:
-            continue
         water -= cell_value
         total_effort += (0.25 * cell_value)
         total_fire += cell_value
