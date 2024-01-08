@@ -1,7 +1,7 @@
 from collections import deque
 
 green_light = int(input())
-free_window = int(input())
+window = int(input())
 crossed_cars_count = 0
 cars_queue = deque()
 
@@ -20,11 +20,11 @@ while command != 'END':
                     break
             if seconds_left == 0:
                 crossed_cars_count += 1
-            if free_window >= abs(seconds_left):
+            if window >= abs(seconds_left):
                 if seconds_left < 0:
                     crossed_cars_count += 1
             else:
-                index = free_window + seconds_left
+                index = window + seconds_left
                 print("A crash happened!")
                 print(f"{current_car} was hit at {current_car[index]}.")
                 exit()
