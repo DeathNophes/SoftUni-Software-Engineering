@@ -2,13 +2,13 @@ from collections import deque
 
 
 def read_robots():
-    dict1 = {}
+    robots_dict = {}
     robot_info = [x.split('-') for x in input().split(';')]
     for robot in robot_info:
         name = robot[0]
         robot_time = int(robot[1])
-        dict1[name] = robot_time
-    return dict1
+        robots_dict[name] = robot_time
+    return robots_dict
 
 
 def convert_initial_time_into_seconds(hours, mins, secs):
