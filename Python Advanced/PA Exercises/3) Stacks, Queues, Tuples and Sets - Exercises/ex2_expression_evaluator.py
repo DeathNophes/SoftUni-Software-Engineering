@@ -19,4 +19,4 @@ for char in expression:
             elif char == '/':
                 numbers.appendleft(first_num // second_num)
 
-print(numbers.popleft())
+print(numbers[0])
