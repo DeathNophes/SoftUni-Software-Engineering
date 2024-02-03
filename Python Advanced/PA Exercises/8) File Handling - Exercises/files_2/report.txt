@@ -6,4 +6,3 @@
 .txt
 - - - file_1.txt
 - - - output_2.txt
-- - - report.txt
