@@ -1,0 +1,9 @@
+.py
+- - - ex1_even_lines.py
+- - - ex2_line_numbers.py
+- - - ex3_file_manipulator.py
+- - - ex4_directory_traversal.py
+.txt
+- - - file_1.txt
+- - - output_2.txt
+- - - report.txt
