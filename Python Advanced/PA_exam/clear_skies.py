@@ -44,7 +44,8 @@ while True:
 
         armor_value -= 100
         if armor_value == 0:
-            print(f"Mission failed, your jetfighter was shot down! Last coordinates [{jet_pos[0]}, {jet_pos[1]}]!")
+            row, col = jet_pos
+            print(f"Mission failed, your jetfighter was shot down! Last coordinates [{row}, {col}]!")
             break
 
 matrix[jet_pos[0]][jet_pos[1]] = 'J'
