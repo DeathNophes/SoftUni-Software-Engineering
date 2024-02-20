@@ -11,4 +11,4 @@ def selection_sort(nums):
 
 numbers = [int(x) for x in input().split()]
 selection_sort(numbers)
-print(f"{' '.join(str(x) for x in numbers)}")
+print(*numbers)
