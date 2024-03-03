@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Python OOP/OOP_Exercises/1) First Steps in OOP - Exercises" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Python OOP/OOP_Exercises/2) Classes and Objects - Exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python OOP/OOP_Labs/3) Inheritance" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9 (Python Advanced)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
