@@ -1,4 +1,4 @@
-from pokemon_battle.pokemon import Pokemon
+from ex8_pokemon_battle.pokemon import Pokemon
 
 
 class Trainer:
