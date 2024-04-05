@@ -27,11 +27,11 @@ class BankApp:
 
     def add_loan(self, loan_type: str):
         try:
-            load = self.VALID_LOANS[loan_type]()
+            loan = self.VALID_LOANS[loan_type]()
         except KeyError:
             raise Exception("Invalid loan type!")
 
-        self.loans.append(load)
+        self.loans.append(loan)
         return f"{loan_type} was successfully added."
 
     def add_client(self, client_type: str, client_name: str, client_id: str, income: float):
@@ -80,14 +80,12 @@ class BankApp:
         return f"Successfully changed {len(loans)} loans."
 
     def increase_clients_interest(self, min_rate: float):
-        count = 0
+        clients_list = [c for c in self.clients if c.interest < min_rate]
 
-        for client in self.clients:
-            if client.interest < min_rate:
-                client.increase_clients_interest()
-                count += 1
+        for client in clients_list:
+            client.increase_clients_interest()
 
-        return f"Number of clients affected: {count}."
+        return f"Number of clients affected: {len(clients_list)}."
 
     def get_statistics(self):
         total_clients_income = sum([c.income for c in self.clients])
