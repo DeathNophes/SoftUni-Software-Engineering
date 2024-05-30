@@ -10,6 +10,6 @@ FULL JOIN
 FULL JOIN
 	customers AS "c" USING (customer_id)
 ORDER BY
-	booking_id,
+	b.booking_id,
 	apartment_owner,
 	customer_name;
