@@ -1,0 +1,58 @@
+CREATE TABLE accounts(
+	id SERIAL PRIMARY KEY,
+	username VARCHAR(30) UNIQUE NOT NULL,
+	password VARCHAR(30) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	gender CHAR(1) CHECK (gender IN ('M', 'F')) NOT NULL,
+	age INT NOT NULL,
+	job_title VARCHAR(40) NOT NULL,
+	ip VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE addresses(
+	id SERIAL PRIMARY KEY,
+	street VARCHAR(30) NOT NULL,
+	town VARCHAR(30) NOT NULL,
+	country VARCHAR(30) NOT NULL,
+	account_id INT REFERENCES accounts ON DELETE CASCADE ON UPDATE CASCADE NOT NULL
+);
+
+CREATE TABLE photos(
+	id SERIAL PRIMARY KEY,
+	description TEXT,
+	capture_date TIMESTAMP NOT NULL,
+	views INT CHECK (views >= 0) DEFAULT 0 NOT NULL
+);
+
+CREATE TABLE comments(
+	id SERIAL PRIMARY KEY,
+	content VARCHAR(255) NOT NULL,
+	published_on TIMESTAMP NOT NULL,
+	photo_id INT REFERENCES photos ON DELETE CASCADE ON UPDATE CASCADE NOT NULL
+);
+
+CREATE TABLE accounts_photos(
+	account_id INT,
+	photo_id INT,
+
+	CONSTRAINT pk_accounts_photos
+		PRIMARY KEY (account_id, photo_id),
+
+	CONSTRAINT fk_accounts_photos_accounts
+		FOREIGN KEY (account_id)
+		REFERENCES accounts(id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+
+	CONSTRAINT fk_accounts_photos_photos
+		FOREIGN KEY (photo_id)
+		REFERENCES photos(id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+);
+
+CREATE TABLE likes(
+	id SERIAL PRIMARY KEY,
+	photo_id INT REFERENCES photos ON DELETE CASCADE ON UPDATE CASCADE NOT NULL,
+	account_id INT REFERENCES accounts ON DELETE CASCADE ON UPDATE CASCADE NOT NULL
+);
