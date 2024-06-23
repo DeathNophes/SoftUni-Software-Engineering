@@ -5,7 +5,7 @@ from django.db import migrations
 
 def add_barcode(apps, schema_editor):
     # loads table
-    Product = apps.get_model("main_app", "Product")
+    product = apps.get_model("main_app", "Product")
 
     # takes all entries from table
     all_products = Product.objects.all()
@@ -20,8 +20,8 @@ def add_barcode(apps, schema_editor):
 
 
 def reverse_add_barcode(apps, schema_editor):
-    Product = apps.get_model("main_app", "Product")
-    for product in Product.objects.all():
+    product = apps.get_model("main_app", "Product")
+    for product in product.objects.all():
         product.barcode = 0
         product.save()
 
