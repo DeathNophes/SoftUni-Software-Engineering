@@ -1,0 +1,33 @@
+h1 {
+    color: burlywood;
+}
+
+p {
+    font-size: 20px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+#main-title {
+    color: aquamarine;
+}
+
+#special-paragraph {
+    font-style: italic;
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 30px;
+}
+
+li {
+    color: darkblue;
+    font-weight: bold;
+}
+
+div {
+    background-color: pink;
+}
