@@ -1,0 +1,50 @@
+nav a {
+    font-weight: bold;
+}
+
+div > section {
+    background-color: lightblue;
+}
+
+section + header {
+    background-color: lightpink;
+    padding: 20px;
+    border: 2px solid;
+}
+
+.highlighted-section {
+    background-color: lightyellow;
+}
+
+section.highlighted-section ~ article {
+    background-color: lightyellow;
+    padding: 20px;
+    border: 2px solid orange;
+}
+
+a.special-link[href="https://softuni.bg"] {
+    color: orange;
+    font-size: large;
+}
+
+ul li:first-child {
+    font-size: large;
+}
+
+ul li:last-child {
+    color: orange;
+}
+
+ul li:nth-child(odd) {
+    color: tomato;
+}
+
+header h1::before {
+    content: '>>';
+    color: red;
+}
+
+header h1::after {
+    content: '<<';
+    color: red;
+}
