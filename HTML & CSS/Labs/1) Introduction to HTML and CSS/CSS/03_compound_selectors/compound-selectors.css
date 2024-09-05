@@ -1,0 +1,34 @@
+p.highlight {
+    color: blue;
+    font-size: 20px;
+}
+
+.shine {
+    color: gold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+div#special-section {
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+a.highlight {
+    color: orange;
+}
+
+li.red-color {
+    color: red;
+}
+
+li.blue-color {
+    color: blue;
+}
+
+li.magenta-color {
+    color: magenta;
+}
