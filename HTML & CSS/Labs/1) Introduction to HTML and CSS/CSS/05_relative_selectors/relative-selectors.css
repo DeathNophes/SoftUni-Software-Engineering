@@ -1,0 +1,26 @@
+section > p {
+    background-color: lightyellow;
+    font-size: larger;
+}
+
+.highlighted-ul {
+    font-size: larger;
+}
+
+.highlighted-ul > li {
+    font-size: larger;
+}
+
+article + article {
+    color: tomato;
+}
+
+.target-heading ~ p {
+    color: lightseagreen;
+    font-style: italic;
+}
+
+.highlighted-item + li a {
+    color: green;
+    font-weight: bold;
+}
