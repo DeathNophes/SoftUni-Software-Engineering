@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the banner */
+.banner {
+    width: 100%; /* Full width of the document */
+    min-height: 500px; /* Minimum height of the banner */
+    background-image: url('image1.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the background image */
+    position: relative; /* Make the section position relative */
+}
+
+/* Style for the text inside the banner */
+.banner-text {
+    position: absolute; /* Position the text absolutely in the banner */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+    text-align: center;
+    color: white;
+}
+
+.banner-text h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
