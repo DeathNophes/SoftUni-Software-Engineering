@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 0.5em;
+}
+
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+  width: 350px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+    flex-basis: 120px;
+}
