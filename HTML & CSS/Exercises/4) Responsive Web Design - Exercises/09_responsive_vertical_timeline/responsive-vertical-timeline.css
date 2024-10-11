@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EEE;
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+.site {
+    max-width: 1200px;
+    margin: 30px auto;
+    border: 1px solid grey;
+    border-radius: 0.3em;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h2 {
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    border-radius: 0.3em;
+    margin-bottom: 40px;
+}
+
+.event {
+    display: flex;
+    width: calc(50% + 30px);
+    gap: 25px;
+}
+
+.event:nth-child(even) {
+    margin-left: calc(50% - 14px);
+    width: auto;
+}
+
+.event section {
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    border-radius: 0.3em;
+}
+
+.event:before {
+    display: block;
+    content: "";
+    background: green;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    border: 2px solid #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.event:nth-child(even):before {
+    background-color: orange;
+}
+
+.event:nth-child(odd) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.section-timeline .container {
+    position: relative;
+}
+
+.section-timeline .container:after {
+    display: block;
+    position: absolute;
+    width: 2px;
+    content: "";
+    background: silver;
+    height: 120%;
+    top: 0;
+    left: calc(50% + 6px);
+    z-index: 2;
+}
+
+.section-timeline .container > * {
+    z-index: 3;
+    position: relative;
+}
+
+@media screen and (max-width: 800px) {
+    .site {
+        max-width: 750px;
+    }
+}
