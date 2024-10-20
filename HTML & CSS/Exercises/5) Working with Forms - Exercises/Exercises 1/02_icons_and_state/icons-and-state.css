@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgrey;
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+.login-form {
+    background: #FFF;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+legend {
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+fieldset .field-first:before {
+    display: block;
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: silver;
+    left: 0;
+    margin-bottom: 15px;
+}
+
+.field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form label:after {
+    content: "*";
+    color: red;
+    padding-left: 3px;
+}
+
+.login-form input {
+    border: 1px solid silver;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+fieldset input[type="submit"] {
+    border: 0;
+    background-color: darkorange;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+i.fa-solid.fa-envelope,
+i.fa-solid.fa-key {
+    position: absolute;
+    right: 0;
+}
+
+.field-email:after {
+    content: "example: iliyan.parmashki@softuni.com";
+    font-size: 12px;
+    font-style: italic;
+}
+
+.field-password:after {
+    content: "minimum 6 characters, letters and numbers, at least 1 special character";
+    font-size: 12px;
+    font-style: italic;
+}
+
