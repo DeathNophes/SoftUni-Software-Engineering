@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgrey;
+}
+
+.login-form {
+    background: #FFF;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+legend {
+    font-weight: 700;
+    padding-bottom: 15px;
+    border-bottom: 2px solid silver;
+    margin-bottom: 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    order: -1;
+}
+
+.login-form input:required ~ label:after {
+    content: "*";
+    color: red;
+    padding-left: 3px;
+}
+
+.login-form input {
+    border: 1px solid silver;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+fieldset input[type="submit"] {
+    border: 0;
+    background-color: darkorange;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+}
