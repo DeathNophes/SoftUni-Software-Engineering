@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgrey;
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+.subscribe-form {
+    display: flex;
+    background: #FFF;
+    box-shadow: 0 0 1em 0 rgb(0,0,0,0.2);
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.subscribe-form input[type="submit"] {
+    background-color: darkorange;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.name, .email {
+    background-color: #E6E6E6;
+    padding: 15px;
+}
+
+.name, .email, .subscribe-form input[type="submit"] {
+    border: 0;
+    border-radius: 3px;
+}
+
+.name, .subscribe-form input[type="submit"] {
+    width: 25%;
+}
+
+.email {
+    width: calc(100% - 50% - 30px);
+}
+
+@media screen and (max-width: 600px) {
+    .name {
+        width: 35%;
+    }
+
+    .email {
+        width: calc(100% - 35% - 15px);
+    }
+
+    .subscribe-form input[type="submit"] {
+        flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .name, .email, .subscribe-form input[type="submit"] {
+        width: 100%;
+    }
+}
