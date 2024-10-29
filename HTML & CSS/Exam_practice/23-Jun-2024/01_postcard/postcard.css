@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightgrey;
+    font-family: "Gochi Hand", cursive;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This is how we did it on the example from the mentors */
+
+.postcard {
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.postcardTop {
+    position: relative;
+    padding: 20px 20px 15px 20px;
+}
+
+.postcardTop h1 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.postcardTop > img {
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.message {
+    position: absolute;
+    bottom: 35px;
+    border-radius: 10px;
+    background: #f0f0f0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    margin-left: 30px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.postcardBottom {
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px 40px;
+    border-top: 1px solid grey;
+}
+
+.postcardBottom h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    opacity: 0.5;
+}
+
+/* This was how I originally designed it to be like */
+
+/*
+.postcard {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin: 30px auto;
+}
+
+.postcardTop {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.postcardTop img {
+    object-fit: cover;
+    width: 840px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.postcardTop .message {
+    position: absolute;
+    background: white;
+    width: 790px;
+    bottom: 40px;
+    left: 45px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.postcardTop .message h2 {
+    margin-bottom: 15px;
+}
+
+.postcardBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #F2F2F2;
+    padding: 30px;
+    border: 1px solid lightgrey;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.postcardBottom h2 {
+    margin-bottom: 10px;
+}
+*/
