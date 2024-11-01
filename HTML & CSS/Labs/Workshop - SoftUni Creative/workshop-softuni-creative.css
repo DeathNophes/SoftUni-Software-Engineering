@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFF;
+    font-family: 'Roboto', sans-serif;
+    color: #625f5f
+}
+
+main {
+    padding-top: 66px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.headerSection {
+    box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: #FFF;
+}
+
+.innerHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    color: #59546D;
+    font-size: 0.8rem;
+}
+
+nav ul li a.enter-button {
+    background: #9B5DC6;
+    color: #FFF;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+}
+
+.diplomsContainer {
+    position: relative;
+}
+
+.innerDiploms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5px 50px 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.diplomsData {
+    display: flex;
+    flex: 0 0 65%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.diplomsData h1 {
+    font-weight: 400;
+}
+
+p.italic {
+    font-style: italic;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.diplomsContainer > img {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    z-index: 2;
+}
+
+.diplomsImg {
+    flex: 1 0;
+}
+
+.diplomsImg > img {
+    width: 100%;
+}
+
+.diplomsBackground {
+    background: #54546d;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    top: -250px;
+    z-index: 1;
+}
+
+.diplomsBackground img {
+    position: absolute;
+    top: 0;
+}
+
+.certificateContainer {
+    background: #14162a;
+    color: #FFF;
+}
+
+.innerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 120px 5px;
+}
+
+.certificateData {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 70%;
+}
+
+.certificateData h2 {
+}
+
+.certificateImg {
+    flex: 1 0;
+}
+
+.certificateImg > img {
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+}
+
+.innerCareer {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5px;
+}
+
+.careerData {
+    flex: 0 0 66%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.careerData h2 {
+}
+
+.careerImg {
+    flex: 1 0;
+}
+
+.careerImg > img {
+    max-width: 100%;
+}
+
+.mainBtn {
+    color: #9B5DC6;
+    border: 1px solid #9B5DC6;
+    display: block;
+    width: max-content;
+    padding: 8px 16px;
+    border-radius: 15px;
+}
+
+footer {
+    background: #2c2c3a;
+}
+
+footer a {
+    color: #FFF;
+}
+
+footer h4 {
+    color: #9B5DC6;
+    font-weight: 700;
+}
+
+.footerContainer {
+    padding: 50px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footerMenu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.footerCol {
+    flex: 0 0 calc(25% - 80px);
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.footerCol p {
+    color: #FFF;
+}
+
+.footerCol > p:last-of-type {
+    font-size: 0.8rem;
+}
+
+.iconsContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Additional customisation */
+
+header nav li:hover {
+    border-bottom: 1px solid #9B5DC6;
+
+}
+
+header nav li {
+    border-bottom: 1px solid transparent;
+}
+
+.enter-button:hover {
+    background: #ff778f;
+}
+
+.mainBtn:hover {
+    background: #9B5DC6;
+    color: #FFF;
+}
+
+.iconsContainer i:hover {
+    color: #9B5DC6;
+}
+
+@media screen and (max-width: 600px) {
+    .innerDiploms {
+        flex-direction: column;
+    }
+
+    .diplomsImg {
+        order: 1;
+    }
+
+    .diplomsData {
+        order: 2;
+    }
+
+    .diplomsBackground {
+    height: 300px;
+    top: 0;
+    right: -100px;
+    width: 300px;
+    }
+
+    .innerContainer {
+        flex-direction: column-reverse;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        gap: 50px;
+    }
+
+    .certificateImg > img {
+        position: relative;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        right: unset;
+    }
+
+    .innerCareer {
+        flex-direction: column;
+    }
+
+    .careerData {
+        text-align: center;
+    }
+
+    .mainBtn {
+        margin: auto;
+    }
+
+    .footerContainer {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .footerCol {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .footerCol:nth-of-type(1) {order: 1}
+    .footerCol:nth-of-type(2) {order: 3}
+    .footerCol:nth-of-type(3) {order: 2}
+    .footerCol:nth-of-type(4) {order: 4}
+
+}
