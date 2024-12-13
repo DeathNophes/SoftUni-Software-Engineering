@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Targeting</title>
+</head>
+<body>
+
+    <h1 id="title">Title</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sit voluptates quae, ea voluptas officiis voluptatum explicabo temporibus iusto iste eaque nobis vero exercitationem iure id cumque. Eius, optio aperiam?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere sit voluptates quae, ea voluptas officiis voluptatum explicabo temporibus iusto iste eaque nobis vero exercitationem iure id cumque. Eius, optio aperiam?</p>
+
+    <div class="header">
+        <div class="main">
+            <div id="button">Button</div>
+        </div>
+    </div>
+
+    <div class="panel"></div>
+
+    <script>
+        // Get single element by its ID
+        const title = document.getElementById('title');
+
+        // Get multiple elements by their class name
+        const allPanelElements = document.getElementsByClassName('panel');
+        
+        // Get multiple elements by their tag name
+        const allParagraphElements = document.getElementsByTagName('p');
+
+        console.log(title, allPanelElements, allParagraphElements);
+
+        // Get single element by query selector - accepts CSS selector
+        const titleQuery = document.querySelector('#title');
+        
+        // Get multiple elements by query selector - accepts CSS selector
+        const allParagraphsQuery = document.querySelectorAll('p');
+
+        console.log(titleQuery, allParagraphsQuery);
+
+        // Get the 2nd element with class 'panel'
+        const secondPanelElement = document.getElementsByClassName('panel')[1];
+        // const secondPanelElementQuery = document.querySelector('.panel:nth-child(2)');
+        const secondPanelElementQueryAll = document.querySelector('.main .panel:nth-child(2)');
+
+        const documentButton = document.getElementById('button');
+        const headerElement = document.querySelector('.header');
+
+        const headerButton = headerElement.querySelector('#button');
+
+        console.log(documentButton);
+        console.log(headerElement);
+        console.log(headerButton);
+
+        // textContent vs innerHTML 
+        // console.log(title);
+        title.textContent = 'New Title After JS <em>execution</em>';
+        title.innerHTML = 'New Title After JS <em>execution</em>';
+
+        title.innerHTML = '';
+
+    </script>
+
+    <div id="header">
+        <div class="branding">
+            <h1><a href="#">Logo</a></h1>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
