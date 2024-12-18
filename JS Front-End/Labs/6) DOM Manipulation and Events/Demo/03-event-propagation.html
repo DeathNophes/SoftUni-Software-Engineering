@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+</head>
+<body>
+
+    <p>Lorem <a href="https://softuni.bg">ipsum dolor</a>, sit amet consectetur adipisicing elit. Esse quis quam quisquam rem cupiditate libero, corrupti ratione ipsam, non ipsum magni animi? Fugit eius similique quis labore sunt, architecto illum.</p>
+
+    <form id="search" action="test.html">
+        <input type="text" name="search" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <script>
+        const searchFormEl = document.querySelector('#search');
+
+        searchFormEl.addEventListener('submit', (event) => {
+            event.preventDefault();
+            console.log('form event submit');
+        });
+
+        const searchEl = document.querySelector('input[name="search"]');
+
+        searchEl.addEventListener("invalid", (event) => {
+            console.log( 'New invalid input event -----');
+            console.log( 'event.target - ', event.target );
+            console.log( 'event.currentTarget - ', event.currentTarget );
+        });
+
+        document.querySelector('body').addEventListener('click', (event) => {
+            console.log( 'New click event -----');
+            console.log( 'event.target - ', event.target );
+            console.log( 'event.currentTarget - ', event.currentTarget );
+        });
+
+        const linkEl = document.querySelector('p a');
+
+        linkEl.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+        })
+
+    </script>
+
+    <style>
+        form {
+            background: #eee;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #efe;
+        }
+    </style>
+
+</body>
+</html>
