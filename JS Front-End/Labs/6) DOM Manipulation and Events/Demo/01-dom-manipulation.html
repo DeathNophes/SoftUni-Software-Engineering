@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolorum eaque sit repellendus sequi non enim est totam velit quisquam sed laborum deleniti, doloremque cum sunt voluptatibus perspiciatis obcaecati veniam!</p>
+    </div>
+
+    <script>
+
+        const container = document.querySelector('#container')
+
+        // Get existing HTML Element - paragraph
+        const htmlParagraph = document.querySelector('#container p');
+        // htmlParagraph.textContent = 'Hi there!'
+
+        console.log(htmlParagraph);
+
+        // Create HTML Element
+        const pChild = document.createElement('p');
+        pChild.textContent = 'I was attached the the DOM with appendChild()';
+    
+        // Attach newly created HTML Element to the DOM 
+        container.appendChild( pChild );
+        
+        // ---
+
+        // Create 2 elements
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+
+        p1.textContent = 'I was attached the the DOM with append()';
+        p2.textContent = 'I was attached the the DOM with append()';
+        
+        
+        // Attach multiple elements at the end 
+        container.append(p1, p2);
+
+        // Attach multiple elements at the start
+        // container.prepend(p1, p2);
+
+        // Clone HTML Element 
+        const p3 = p2.cloneNode();
+        p3.textContent = 'I was cloned using cloneNode() and attached with appendChild()';
+        
+        container.appendChild( p3 );
+
+    </script>
+</body>
+</html>
