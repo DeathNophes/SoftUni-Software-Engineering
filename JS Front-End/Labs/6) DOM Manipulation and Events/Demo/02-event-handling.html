@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    
+    <ul>
+        <li>
+            <span>Add event handler with HTML Attributes</span>
+            <button onclick="htmlAttributeEventHandler(event)">Click me!</button>
+        </li>
+
+        <li>
+            <span>Add event handler using DOM element properties</span>
+            <button id="element-properties">Click me!</button>
+        </li>
+
+        <li>
+            <span>Add event using DOM event handler</span>
+            <button id="event-handler">Click me!</button>
+        </li>
+    </ul>
+
+    <script>
+
+        function htmlAttributeEventHandler(event) {
+            console.log(event);
+            console.log('Added event handler with HTML Attribute');
+        }
+        
+        // Add event handler using DOM element properties
+        const button2 = document.querySelector('#element-properties');
+        button2.onclick = function(event) {
+            console.log(event);
+            console.log('Added event handler with HTML element properties');
+        }
+
+        // Add event using DOM event handler
+        const button3 = document.querySelector('#event-handler');
+        button3.addEventListener('click', (e) => {
+            console.log(event);
+            console.log('Added event using DOM event handler - preferred method');
+        });
+
+        function additionalHandler(event) {
+            console.log(event);
+            console.log('Added additional event handler');
+        }
+
+        // Add additional event handler
+        button3.addEventListener('click', additionalHandler);
+
+        // Remove the additional event handler
+        setTimeout(() => {
+            button3.removeEventListener('click', additionalHandler);
+        }, 10000)
+
+    </script>
+
+</body>
+</html>
