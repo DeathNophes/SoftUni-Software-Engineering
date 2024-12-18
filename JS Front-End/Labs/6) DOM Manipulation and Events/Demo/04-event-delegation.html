@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+
+    <ul>
+        <li>
+            <span class="text">Some text 1</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="text">Some text 2</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="text">Some text 3</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="text">Some text 4</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="text">Some text 5</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="text">Some text 6</span>
+            <button class="delete">Delete</button>
+        </li>
+        <li>
+            <span class="text">Some text 7</span>
+            <button class="delete">Delete</button>
+        </li>
+    </ul>
+
+    <script>
+
+        const list = document.querySelector('ul');
+
+        function deleteListItemEventHandler(event) {
+            if ( event.target.nodeName === 'BUTTON' ) {
+                event.target.parentElement.remove();
+            }
+        }
+
+        list.addEventListener('click', deleteListItemEventHandler);
+
+    </script>
+
+</body>
+</html>
