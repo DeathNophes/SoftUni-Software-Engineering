@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Full Height</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            padding: 1em;
+        }
+
+        header {
+            border-bottom: 2px solid #ccc;
+        }
+
+        footer {
+            margin-top: auto;
+            border-top: 2px solid #ccc;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Title of the page</h1>
+    </header>
+
+    <main>
+        <h2>Some title of the content</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi fugiat, tenetur debitis ea rerum maiores sed dignissimos laudantium eaque quibusdam, consequatur aliquid sit. Id nisi sed voluptatum voluptates assumenda?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi fugiat, tenetur debitis ea rerum maiores sed dignissimos laudantium eaque quibusdam, consequatur aliquid sit. Id nisi sed voluptatum voluptates assumenda?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi fugiat, tenetur debitis ea rerum maiores sed dignissimos laudantium eaque quibusdam, consequatur aliquid sit. Id nisi sed voluptatum voluptates assumenda?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus nisi fugiat, tenetur debitis ea rerum maiores sed dignissimos laudantium eaque quibusdam, consequatur aliquid sit. Id nisi sed voluptatum voluptates assumenda?</p>
+    </main>
+    
+    <footer>
+        <p>All rights reserved for lazy people!</p>
+    </footer>
+
+</body>
+</html>
