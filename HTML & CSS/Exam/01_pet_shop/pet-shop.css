@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 "Poppins", sans-serif;
+}
+
+body {
+    font: inherit;
+    background-color: lightgrey;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container-flex {
+    display: flex;
+    background: #FFF;
+    margin: 30px auto;
+    padding: 30px 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+    max-width: 1800px;
+    gap: 50px;
+    border-radius: 3px;
+}
+
+.container-flex img {
+    object-fit: cover;
+    width: 640px;
+}
+
+.about-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us {
+    background: #F3F3F3;
+    border-left: 4px solid #7AB730;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 15px;
+    border-radius: 3px;
+}
+
+.about-us p {
+    color: #8DB730;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.about-us h1 {
+    font-size: 50px;
+}
+
+.between-paragraph {
+    padding: 20px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.our-mission-our-vision {
+    background: #F3F3F3;
+}
+
+.our-mission-our-vision {
+    padding: 20px;
+}
+
+.mission-vision {
+    display: flex;
+    border-radius: 3px;
+}
+
+.mission-vision li {
+    flex: 1 1 auto;
+    display: block;
+    list-style: none outside;
+    margin-bottom: 1.3em;
+}
+
+.mission-vision a {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    background-color: #7AB730;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.mission-vision li.current a {
+    background-color: #F0F0F0;
+    color: #7AB730;
+}
+
+.our-mission-our-vision p {
+    font-size: 14px;
+    color: #656565;
+}
+
+
